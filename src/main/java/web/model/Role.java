@@ -15,14 +15,12 @@ public class Role implements GrantedAuthority {
 
     @Column
     private String role;
-
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
 
     public Role() {
 
     }
-
 
     public int getId() {
         return id;

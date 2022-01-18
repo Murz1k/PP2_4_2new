@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Configuration
-@EnableWebSecurity  //класс ответвенный за секьюрити конфигурвции
+@EnableWebSecurity  //класс ответвенный за секьюрити конфигурации
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsService userDetailsService;        //надо поменять инмемори на юрейз дитэйл, связать с юзером
     private final LoginSuccessHandler successUserHandler;

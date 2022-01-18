@@ -29,7 +29,7 @@ public class AdminsController {
     public String index(Model model) {
         model.addAttribute("users", userService.getAllUsers());
 
-        return "users/index";
+        return "/index";
     }
 
     @GetMapping("/{id}")
@@ -44,7 +44,7 @@ public class AdminsController {
         model.addAttribute("user", new User());
         model.addAttribute("roles", roleService.getAllRoles());
 
-        return "users/new";
+        return "/new";
     }
 
     @PostMapping()
@@ -67,7 +67,7 @@ public class AdminsController {
         user.setPassword("");
         model.addAttribute("user", user);
 
-        return "users/edit";
+        return "/edit";
     }
 
     @PatchMapping("/{id}")
