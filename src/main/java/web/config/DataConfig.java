@@ -47,11 +47,11 @@ public class DataConfig {
         containerEntityManagerFactoryBean.setJpaVendorAdapter(adaptor);
 
         Properties props = new Properties();
-        props.getProperty("DataBase.driver");
-        props.getProperty("hibernate.show_sql");
-        props.getProperty("hibernate.hbm2ddl.auto");
-        props.getProperty("hibernate.enable_lazy_load_no_trans");
-        props.getProperty("hibernate.format_sql");
+        props.setProperty("hibernate.hbm2ddl.auto", "update");
+        props.setProperty("DataBase.driver", "com.mysql.cj.jdbc.Driver");
+        props.setProperty("hibernate.show_sql","true");
+        props.setProperty("hibernate.enable_lazy_load_no_trans", "true");
+        props.setProperty("hibernate.format_sql", "true");
         containerEntityManagerFactoryBean.setJpaProperties(props);
         containerEntityManagerFactoryBean.setPackagesToScan(env.getProperty("DataBase.entity.package"));
 

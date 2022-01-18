@@ -103,7 +103,7 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles();
-    }
+    }  //вернет название роли
 
     @Override
     public String getPassword() {
