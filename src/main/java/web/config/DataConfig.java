@@ -52,6 +52,10 @@ public class DataConfig {
         props.setProperty("hibernate.show_sql","true");
         props.setProperty("hibernate.enable_lazy_load_no_trans", "true");
         props.setProperty("hibernate.format_sql", "true");
+        props.setProperty("hibernate.connection.characterEncoding", "utf8");
+        props.setProperty("hibernate.connection.CharSet", "utf8");
+        props.setProperty("hibernate.connection.useUnicode", "true");
+
         containerEntityManagerFactoryBean.setJpaProperties(props);
         containerEntityManagerFactoryBean.setPackagesToScan(env.getProperty("DataBase.entity.package"));
 

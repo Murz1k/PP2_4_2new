@@ -21,6 +21,15 @@
     </style>
 </head>
 <body>
+<center><b>Данные о пользователе: </b></center>
+<br>
+<style>
+    body {
+        background: #d2cfcf; /* Цвет фона и путь к файлу */
+        background-size: cover;
+        color: #262424; /* Цвет текста */
+    }
+</style>
 <table>
     <tr>
         <th>Id</th>
@@ -38,8 +47,8 @@
     </th:block>
 </table>
 <br/>
-
 <div style="display:flex; justify-content:center; align-items:center;">
+
     <form th:method="GET" th:action="@{/logout}">
         <input type="submit" value="Logout"/>
     </form>

@@ -6,6 +6,15 @@
     <title>Add new user</title>
 </head>
 <body>
+<center><b>Заполните форму:</b></center>
+<br>
+<style>
+    body {
+        background: #e1d7e3; /* Цвет фона и путь к файлу */
+        background-size: cover;
+        color: #262424; /* Цвет текста */
+    }
+</style>
 <div style="display:flex;justify-content:center;align-items:center;">
     <form th:method="POST" th:action="@{/admin}" th:object="${user}">
         <label for="name">Name</label>

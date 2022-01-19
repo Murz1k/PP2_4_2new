@@ -3,9 +3,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Edit user</title>
+
+
+     <center><b>Заполните форму:</b></center>
+<br>
+
 </head>
 <body>
+<style>
+    body {
+        background: #dedbe0; /* Цвет фона и путь к файлу */
+        background-size: cover;
+        color: #262424; /* Цвет текста */
+    }
+</style>
 <div style="display:flex;justify-content:center;align-items:center;">
     <form th:method="PATCH" th:action="@{/admin/{id}(id=${user.getId()})}" th:object="${user}">
         <label for="name">Name</label>

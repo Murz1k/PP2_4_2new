@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <title>Users</title>
     <style>
+        body {
+            background: #ddd9e0; /* Цвет фона и путь к файлу */
+            background-size: cover;
+            color: #262424; /* Цвет текста */
+        }
+
         TABLE {
             width: 700px;
             margin: auto;
         }
         TD, TH {
             padding: 6px;
-            border: 1px solid #232121;
+            border: 1px solid #312f2f;
         }
 
         TH {
@@ -20,6 +26,12 @@
     </style>
 </head>
 <body>
+
+<center><b>Личный кабинет администратора </b></center>
+<br>
+<center><b>Все пользователи:</b></center>
+
+<br>
 <table>
     <tr>
         <th>Id</th>
@@ -71,14 +83,11 @@
 
 <br/>
 
-<div style="display:flex;
-justify-content:center;
-align-items:center;">
+<div style="display:flex;justify-content:center;align-items:center;">
     <form th:method="GET" th:action="@{/logout}">
         <input type="submit" value="Logout"/>
 
     </form>
 </div>
-
 </body>
 </html>

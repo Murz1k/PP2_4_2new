@@ -1,5 +1,6 @@
 package web.security;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +10,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import java.io.IOException;
 
 
 @Configuration
@@ -44,4 +51,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(successUserHandler);
         //.permitAll()
     }
+
+
+
+
+//        public class EncodingFilterConfig implements Filter {
+//            @Override
+//            public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+//                    throws IOException, ServletException {
+//                request.setCharacterEncoding("UTF-8");
+//                response.setContentType("text/html; charset=UTF-8");
+//                chain.doFilter(request, response);
+//
+//            }
 }
